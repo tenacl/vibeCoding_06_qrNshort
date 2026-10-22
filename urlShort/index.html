@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL단축 - QRnShort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="../" class="home-link">← QRnShort 홈</a>
+    </header>
+
+    <main class="card">
+        <h1>🔗 URL단축</h1>
+        <p class="desc">긴 URL을 입력하고 '단축하기'를 누르세요.</p>
+
+        <form id="short-form" class="row">
+            <input type="text" id="url-input" placeholder="URL 입력 (예: https://www.sdu.ac.kr/)" autocomplete="off" autofocus>
+            <button type="submit" id="shorten-btn" disabled>단축하기</button>
+        </form>
+
+        <div class="row">
+            <input type="text" id="result" placeholder="단축된 URL이 여기에 표시됩니다" readonly>
+            <button type="button" id="copy-btn" disabled>복사</button>
+        </div>
+        <p class="error" id="error" hidden></p>
+    </main>
+
+    <div class="toast" id="toast" hidden>복사하였습니다</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

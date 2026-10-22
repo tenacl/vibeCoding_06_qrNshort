@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Pretendard", "Malgun Gothic", Arial, sans-serif;
+    color: #2b2b2b;
+    background: linear-gradient(135deg, #e3f2fd 0%, #fff8e1 60%, #ffe9a8 100%);
+}
+
+.header {
+    padding: 20px 28px;
+}
+
+.home-link {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 8px 14px;
+    border-radius: 999px;
+}
+
+.home-link:hover {
+    background: #fff;
+}
+
+.card {
+    max-width: 600px;
+    margin: 10vh auto 0;
+    padding: 36px 28px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.desc {
+    margin: 8px 0 28px;
+    color: #666;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.row input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+}
+
+.row input:focus {
+    border-color: #ff9800;
+}
+
+#result {
+    background: #f6f6f6;
+    color: #1565c0;
+    font-weight: bold;
+}
+
+.row button {
+    padding: 0 22px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: #ffc400;
+    color: #2b2b2b;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.row button:hover:not(:disabled) {
+    background: #ffb300;
+}
+
+.row button:disabled {
+    background: #e0e0e0;
+    color: #9e9e9e;
+    cursor: not-allowed;
+}
+
+.error {
+    margin: 0;
+    color: #d32f2f;
+    font-size: 14px;
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: #323232;
+    color: #fff;
+    font-size: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 520px) {
+    .card {
+        margin: 4vh 16px 0;
+    }
+}

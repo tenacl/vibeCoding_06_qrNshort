@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --mx: 50%;
+    --my: 50%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Pretendard", "Malgun Gothic", Arial, sans-serif;
+    color: #2b2b2b;
+    background:
+        radial-gradient(circle at var(--mx) var(--my), rgba(255, 196, 0, 0.55), transparent 45%),
+        linear-gradient(135deg, #fff8e1 0%, #ffe9a8 45%, #ffd6e0 100%);
+    background-attachment: fixed;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 28px;
+}
+
+.home-link {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 8px 14px;
+    border-radius: 999px;
+}
+
+.home-link:hover {
+    background: #fff;
+}
+
+.logo {
+    height: 44px;
+    display: block;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 84px);
+    padding: 0 16px 60px;
+    gap: 28px;
+}
+
+.input-section {
+    display: flex;
+    width: 100%;
+    max-width: 560px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+    padding: 6px;
+    box-shadow: 0 8px 30px rgba(255, 170, 0, 0.25);
+    transition: transform 0.4s ease;
+}
+
+#url-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 0 18px;
+}
+
+#generate-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #2b2b2b;
+    background: #ffc400;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#generate-btn:hover {
+    background: #ffb300;
+}
+
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.qrcode {
+    background: #fff;
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.qrcode:hover {
+    transform: scale(1.03);
+}
+
+.qrcode img,
+.qrcode canvas {
+    display: block;
+}
+
+.qr-hint {
+    margin: 16px 0 4px;
+    font-size: 14px;
+    color: #6b5b00;
+}
+
+.qr-url {
+    margin: 0;
+    font-size: 13px;
+    color: #7a7a7a;
+    word-break: break-all;
+    text-align: center;
+    max-width: 560px;
+}
+
+.error {
+    margin: 0;
+    color: #d32f2f;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
